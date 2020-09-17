@@ -1,0 +1,32 @@
+.detailsBox
+{
+    width: 100%;
+    min-height: 400px;
+}
+
+.img-box
+{
+    width: 30%;
+    float: left;
+}
+.description-box
+{
+    width: 70%;
+    float: right;
+}
+
+.review-btn
+{
+    width: 100%;
+}
+.btnPrimary
+{
+    background: cornflowerblue;
+    width: 100%;
+    color: white;
+}
+.img-box
+{
+    max-width: 350px;
+    max-height: 400px;
+}

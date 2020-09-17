@@ -1,0 +1,54 @@
+.action-bar {
+    min-height: 40px;
+    height: 40px;
+    margin-top: 0px;
+    background-color: #333333;
+    border-bottom: 0.5px solid;
+}
+
+.fix-top-actionbar {
+    position: fixed;
+    top: 40px;
+    z-index: 5;
+    width: 100%;
+}
+
+.action-bar-label {
+    padding-left: 24px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+.action-bar-label-input {
+    padding-left: 24px;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+.item-space {
+    margin-left: 9px;
+    margin-right: 9px;
+    width: 4%;
+    min-width: 7.0em;
+}
+.headerContainer
+{
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    width: 100%;
+}
+.headerTabs
+{
+    text-align: right;
+}
+.countSection{
+    color: white;  
+    background: lightgrey;
+    height: 40px;
+    padding-top: 5px;
+}
+.no-margin
+{
+    margin: 0px;
+}
