@@ -8,7 +8,6 @@ import Select from "../DumpComponents/Select";
 
 class Filters extends Component {
   render() {
-    debugger;
     let genresList = [
       { id: 1, text: "Action" },
       { id: 2, text: "Romantic" },

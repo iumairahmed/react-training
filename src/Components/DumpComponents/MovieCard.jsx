@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./MovieCard.scss";
+import calenderLogo from "../../Assets/calendar-week-solid.svg";
+import ratingLogo from "../../Assets/star-solid.svg";
 
 class MovieCard extends Component {
   render() {
     return (
-      <div style={{ marginTop: "10px" }}>
+      <div>
         <div key={this.props.movie.id}>
           <div className="card">
             <Link to={"/movies/" + this.props.movie.id}>
@@ -17,11 +19,11 @@ class MovieCard extends Component {
             </Link>
             <div className="card-body">
               <Link to={"/movies/" + this.props.movie.id}>
-                <h4>{this.props.movie.original_title}</h4>
+                <h5>{this.props.movie.original_title}</h5>
               </Link>
-              <i className="fa fa-calendar"></i>
+              <img className="logo center" src={calenderLogo} alt="Calender Logo" />
               <p>{this.props.movie.release_date}</p>
-              <i className="fa fa-calendar"></i>
+              <img className="logo center" src={ratingLogo} alt="Rating Logo" />
               <p>{this.props.movie.vote_average}</p>
             </div>
             

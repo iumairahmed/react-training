@@ -26,7 +26,7 @@ class Movies extends Component {
 
   render() {
     return (
-      <div>
+      <div className="moviesBox">
           {this.state.movies.map((element) => {
             return (
             <MovieCard key={element.id} movie={element} />

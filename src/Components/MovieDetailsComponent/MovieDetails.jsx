@@ -25,7 +25,6 @@ class MoviesDetails extends Component {
     let genreList = "";
     if (this.state.movie != null) {
       if (this.state.movie.genres != null) {
-        debugger;
         genreList = this.state.movie.genres.map((element) => {
           return this.state.movie.genres.length > 1
             ? element.name + ","
@@ -44,7 +43,14 @@ class MoviesDetails extends Component {
                 }
               />
             </div>
+
             <div className="description-box">
+              <div style={{ paddingTop: "10px"}}>
+                <Link to={`/movies/`}>
+                  See all movies
+                </Link>
+                <hr/>
+              </div>
               <h2>{this.state.movie.original_title}</h2>
               <h4>Overview: </h4>
               <p>{this.state.movie.overview}</p>

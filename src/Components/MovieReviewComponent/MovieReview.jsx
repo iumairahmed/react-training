@@ -8,7 +8,6 @@ class MovieReviews extends Component {
 
   componentDidMount() {
     let movieId = this.props.match.params.id;
-    debugger;
     axios
       .get(
         `https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=e13f23abef8864643f53bb4a255ba05a&language=en-US`
@@ -31,6 +30,9 @@ class MovieReviews extends Component {
           </tr>
         );
       });
+    }
+    else{
+      return(<p style={{textAlign: 'center'}}>No review found!</p>)
     }
     return (
       <div>

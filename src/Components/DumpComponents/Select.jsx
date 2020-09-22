@@ -3,7 +3,6 @@ import React, { Component } from "react";
 
 class Select extends Component {
   render() {
-      debugger;
     const [id, text] = (this.props.data && this.props.data.length) > 0 ? Object.keys(this.props.data[0]): '';
     const options =
       this.props.data && this.props.data.length > 0 ? (
