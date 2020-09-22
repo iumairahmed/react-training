@@ -1,48 +1,79 @@
 import React, { Component } from "react";
 import { Link, useParams } from "react-router-dom";
+import axios from "axios";
 import "./MovieDetails.scss";
-import movies from "../../Data/movie.json";
 
 class MoviesDetails extends Component {
-  state = { movies: [] };
+  state = { movie: {} };
   constructor(props) {
     super(props);
   }
 
   componentDidMount() {
-    this.setState({ movies: movies.Movies });
+    let movieId = this.props.match.params.id;
+    axios
+      .get(
+        `https://api.themoviedb.org/3/movie/${movieId}?api_key=e13f23abef8864643f53bb4a255ba05a&language=en-US`
+      )
+      .then((res) => {
+        this.setState({ movie: res.data }); // setting state will rerender component
+      });
   }
 
   render() {
-    const movie = this.state.movies.find(
-      (p) => p.Id == this.props.match.params.id
-    );
     let movieDetailsBox;
-    if (movie != null) {
-      movieDetailsBox = 
-      <div>
-        <div className="detailsBox">
-          <div>
-            <img className="img-box" src={movie.Poster} />
+    let genreList = "";
+    if (this.state.movie != null) {
+      if (this.state.movie.genres != null) {
+        debugger;
+        genreList = this.state.movie.genres.map((element) => {
+          return this.state.movie.genres.length > 1
+            ? element.name + ","
+            : element.name;
+        });
+      }
+      movieDetailsBox = (
+        <div>
+          <div className="detailsBox">
+            <div>
+              <img
+                className="img-box"
+                src={
+                  "https://image.tmdb.org/t/p/original" +
+                  this.state.movie.poster_path
+                }
+              />
+            </div>
+            <div className="description-box">
+              <h2>{this.state.movie.original_title}</h2>
+              <h4>Overview: </h4>
+              <p>{this.state.movie.overview}</p>
+              <div className="detailsRow">
+                <p className="greylabel">Runtime: </p>
+                <p className="whitelabel">{this.state.movie.runtime}</p>
+                <p className="greylabel">Release Date: </p>
+                <p className="whitelabel">{this.state.movie.release_date}</p>
+              </div>
+              <br />
+              <div className="detailsRow">
+                <p className="greylabel">Genres: </p>
+                <p className="whitelabel">{genreList}</p>
+              </div>
+              <div className="detailsRow">
+                <p className="greylabel">Spoken Language: </p>
+                <p className="whitelabel">{this.state.movie.release_date}</p>
+              </div>
+            </div>
           </div>
-          <div className="description-box">
-            <h2>Name: </h2>{movie.Title}
-            <h4>Overview: </h4><p>{movie.Description}</p>
-            <h4>Runtime: </h4>{movie.Runtime}
-            <h4>Release Date: </h4>{movie.Released}
-            <h4>Genre: </h4>{movie.Genre}
-            <h4>Spoken Language: </h4>{movie.Language}
-            <h4>Country: </h4>{movie.Country}
+          <div className="review-btn">
+            <Link to={`/reviews/` + this.state.movie.id}>
+              <button className="btnPrimary">Show Reviews</button>
+            </Link>
           </div>
         </div>
-        <div className="review-btn">
-          <Link to={`/reviews/`+movie.Id}>
-            <button className="btnPrimary">Show Reviews</button>
-          </Link>
-        </div>
-      </div>;
-    }else{
-        movieDetailsBox = <div></div>
+      );
+    } else {
+      movieDetailsBox = <div></div>;
     }
     return movieDetailsBox;
   }

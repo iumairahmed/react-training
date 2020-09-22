@@ -1,20 +1,19 @@
-.reviewsBox
-{
-    padding:20px
+.reviewsBox {
+  padding: 20px;
 }
-.reviewsTable
-{
-    width:100%;
+.reviewsTable {
+  width: 100%;
 }
-.excerpt
-{
-    text-align: left;
+.excerpt {
+  text-align: left;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
 }
-.author
-{
-    width:10%
+.author {
+  width: 10%;
 }
-.more
-{
-    width:10%
+.more {
+  width: 10%;
 }

@@ -1,5 +1,6 @@
 .detailsBox
 {
+    background-color: #e0e0e0;
     width: 100%;
     min-height: 400px;
 }
@@ -29,4 +30,16 @@
 {
     max-width: 350px;
     max-height: 400px;
+}
+.greylabel{
+    background-color: darkgrey;
+    float: left;
+}
+.whitelabel{
+    background-color: white;
+    float: left;
+}
+.detailsRow{
+    float:left;
+    width: 100%;
 }

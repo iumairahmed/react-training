@@ -14,11 +14,10 @@ function App() {
         <Header />
         <Filters />
         <Switch>
-          <Route exact path="/movies">
-            <Movies />
-          </Route>
-          <Route path="/movies/:id" component={MoviesDetails}></Route>
-          <Route path="/reviews/:id" component={MovieReviews}></Route>
+          <Route exact path="/" component={Movies}></Route>
+          <Route exact path="/movies" component={Movies}></Route>
+          <Route exact path="/movies/:id" component={MoviesDetails}></Route>
+          <Route exact path="/reviews/:id" component={MovieReviews}></Route>
           <Route path="/"></Route>
         </Switch>
       </Fragment>

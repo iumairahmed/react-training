@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Container, Row, Col, Card, CardGroup } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import axios from "axios";
 import movies from "../../Data/movie.json";
+import MovieCard from "../DumpComponents/MovieCard";
 import "./Movies.scss";
 
 class Movies extends Component {
@@ -17,40 +18,20 @@ class Movies extends Component {
   }
 
   loadMovies() {
-    this.setState({ movies: movies.Movies });
+    axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=e13f23abef8864643f53bb4a255ba05a&language=en-US`)
+      .then(res => {
+        this.setState({ movies: res.data.results });  // setting state will rerender component
+      })
   }
 
   render() {
     return (
-      <div style={{ marginTop: "10px" }}>
-        <Row className="no-margin">
+      <div>
           {this.state.movies.map((element) => {
             return (
-              <Col md={3} key={element.Id}>
-                <Card>
-                  <Link to={"/movies/" + element.Id}>
-                    <Card.Img
-                      className="imgBox"
-                      variant="top"
-                      src={element.Poster}
-                    />
-                  </Link>
-                  <Card.Body>
-                    <Link to={"/movies?Id=" + element.Id}>
-                      <Card.Title>{element.Title}</Card.Title>
-                    </Link>
-                    <Card.Text>{element.Description}</Card.Text>
-                  </Card.Body>
-                  <Card.Footer>
-                    <small className="text-muted">
-                      Last updated 3 mins ago
-                    </small>
-                  </Card.Footer>
-                </Card>
-              </Col>
+            <MovieCard key={element.id} movie={element} />
             );
           })}
-        </Row>
       </div>
     );
   }
