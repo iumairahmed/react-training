@@ -1,0 +1,74 @@
+{
+  "Movies": [
+    {
+      "Id": "1",
+      "Title": "The Graduate",
+      "Year": "1967",
+      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque risus vel nulla commodo, vitae ullamcorper ligula tristique. Aenean nulla purus, cursus vulputate ligula at, pharetra dignissim mauris. Morbi eu venenatis lorem. Vestibulum luctus tortor eget aliquet mattis.",
+      "Released": "22 Dec 1967",
+      "Runtime": "106 min",
+      "Genre": ["Comedy", "Drama", "Romance"],
+      "Director": "Mike Nichols",
+      "Language": "English",
+      "Country": "USA",
+      "Poster": "https://images-na.ssl-images-amazon.com/images/I/512TlHihQSL._SY445_.jpg",
+      "imdbRating": "8.1"
+    },
+    {
+      "Id": "2",
+      "Title": "Joker",
+      "Year": "2019",
+      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque risus vel nulla commodo, vitae ullamcorper ligula tristique. Aenean nulla purus, cursus vulputate ligula at, pharetra dignissim mauris. Morbi eu venenatis lorem. Vestibulum luctus tortor eget aliquet mattis.",
+      "Released": "2 Oct 2019",
+      "Runtime": "106 min",
+      "Genre": ["Comedy", "Drama", "Romance"],
+      "Director": "Mike Nichols",
+      "Language": "English",
+      "Country": "USA",
+      "Poster": "https://i.pinimg.com/736x/7c/0c/f2/7c0cf26a8a1e7b9fe8a1e393f28177f1.jpg",
+      "imdbRating": "8.1"
+    },
+    {
+      "Id": "3",
+      "Title": "Invasion",
+      "Year": "2019",
+      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque risus vel nulla commodo, vitae ullamcorper ligula tristique. Aenean nulla purus, cursus vulputate ligula at, pharetra dignissim mauris. Morbi eu venenatis lorem. Vestibulum luctus tortor eget aliquet mattis.",
+      "Released": "01 January 2020",
+      "Runtime": "106 min",
+      "Genre": ["Comedy", "Drama", "Romance"],
+      "Director": "Mike Nichols",
+      "Language": "English",
+      "Country": "USA",
+      "Poster": "https://static.rogerebert.com/uploads/movie/movie_poster/the-invasion-2007/large_AiGIhoLpX4gcbbaX6JwFSygAqPY.jpg",
+      "imdbRating": "8.1"
+    },
+    {
+      "Id": "4",
+      "Title": "Ashfall",
+      "Year": "2019",
+      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque risus vel nulla commodo, vitae ullamcorper ligula tristique. Aenean nulla purus, cursus vulputate ligula at, pharetra dignissim mauris. Morbi eu venenatis lorem. Vestibulum luctus tortor eget aliquet mattis.",
+      "Released": "19 December 2019",
+      "Runtime": "106 min",
+      "Genre": ["Comedy", "Drama", "Romance"],
+      "Director": "Mike Nichols",
+      "Language": "English",
+      "Country": "USA",
+      "Poster": "https://subtitlematch.com/wp-content/uploads/2020/05/Ashfall-2019-627x1024.jpg",
+      "imdbRating": "8.1"
+    },
+    {
+      "Id": "5",
+      "Title": "Frozen 2",
+      "Year": "2019",
+      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque risus vel nulla commodo, vitae ullamcorper ligula tristique. Aenean nulla purus, cursus vulputate ligula at, pharetra dignissim mauris. Morbi eu venenatis lorem. Vestibulum luctus tortor eget aliquet mattis.",
+      "Released": "20 November 2019",
+      "Runtime": "106 min",
+      "Genre": ["Comedy", "Drama", "Romance"],
+      "Director": "Mike Nichols",
+      "Language": "English",
+      "Country": "USA",
+      "Poster": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4f/Frozen_2_poster.jpg/220px-Frozen_2_poster.jpg",
+      "imdbRating": "8.1"
+    }
+  ]
+}
