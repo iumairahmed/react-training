@@ -1,0 +1,52 @@
+.card {
+  height: 430px;
+  width: 25%;
+  float: left;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  padding: 2px;
+}
+
+.cardBody {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+}
+.imgBox {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 220px;
+  width: 50%;
+}
+.logo{
+    float: left;
+    margin-top: 3px;
+    margin-right: 5px;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    width: 13px;
+}
+.favBtn{
+  width: 100%;
+  border-radius: 5px;
+  background: cornflowerblue;
+  color: white;
+  border: 2px solid white;
+}
+.truncate {
+  text-align: left;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
